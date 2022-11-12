@@ -35,14 +35,14 @@ TA_keyword varchar(255), TA_keyword_numfiles int, TA_keyword_numsearch int)
 
 >mysql> SHOW COLUMNS from sse_TA;  
 
->+----------------------+--------------+------+-----+---------+----------------+    
->| Field                 | Type         | Null | Key | Default | Extra          |    
->+----------------------+--------------+------+-----+---------+----------------+    
->| TA_keyword_id         | int          | NO   | PRI | NULL    | auto_increment |    
->| TA_keyword            | varchar(255) | YES  |     | NULL    |                |    
->| TA_keyword_numfiles   | int          | YES  |     | NULL    |                |    
->| TA_keyword_numsearch  | int          | YES  |     | NULL    |                |    
->+----------------------+--------------+------+-----+---------+----------------+    
+| :----- | :----- | :----- | :----- | :----- | :----- |   
+| Field                 | Type         | Null | Key | Default | Extra          |    
++----------------------+--------------+------+-----+---------+----------------+    
+| TA_keyword_id         | int          | NO   | PRI | NULL    | auto_increment |    
+| TA_keyword            | varchar(255) | YES  |     | NULL    |                |    
+| TA_keyword_numfiles   | int          | YES  |     | NULL    |                |    
+| TA_keyword_numsearch  | int          | YES  |     | NULL    |                |    
++----------------------+--------------+------+-----+---------+----------------+    
 
 *B- CSP database definition*  
 
