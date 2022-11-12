@@ -42,7 +42,7 @@ TA_keyword varchar(255), TA_keyword_numfiles int, TA_keyword_numsearch int)
 >| TA_keyword            | varchar(255) | YES  |     | NULL    |                |    
 >| TA_keyword_numfiles   | int          | YES  |     | NULL    |                |    
 >| TA_keyword_numsearch  | int          | YES  |     | NULL    |                |    
-+----------------------+--------------+------+-----+---------+----------------+    
+   
 
 *B- CSP database definition*  
 
@@ -54,13 +54,12 @@ TA_keyword varchar(255), TA_keyword_numfiles int, TA_keyword_numsearch int)
 csp_keywords_address varchar(255), csp_keywords_value varchar(255));
 
 >mysql> SHOW COLUMNS FROM CSP_dict;  
-+----------------------+--------------+------+-----+---------+----------------+  
-| Field                | Type         | Null | Key | Default | Extra          |  
-+----------------------+--------------+------+-----+---------+----------------+  
-| id                   | int          | NO   | PRI | NULL    | auto_increment |  
-| csp_keywords_address | varchar(255) | YES  |     | NULL    |                |  
-| csp_keywords_value   | varchar(255) | YES  |     | NULL    |                |  
-+----------------------+--------------+------+-----+---------+----------------+  
+ 
+>| Field                | Type         | Null | Key | Default | Extra          |  
+>| :----- | :----- | :----- | :----- | :----- | :----- |  
+>| id                   | int          | NO   | PRI | NULL    | auto_increment |  
+>| csp_keywords_address | varchar(255) | YES  |     | NULL    |                |  
+>| csp_keywords_value   | varchar(255) | YES  |     | NULL    |                |  
 
 TABLE library :   
 
@@ -68,12 +67,12 @@ TABLE library :
 file longtext);  
 
 >mysql> SHOW COLUMNS FROM library;  
-+-------+--------------+------+-----+---------+-------+  
-| Field | Type         | Null | Key | Default | Extra |  
-+-------+--------------+------+-----+---------+-------+  
-| id    | varchar(255) | NO   | PRI | NULL    |       |  
-| file  | longtext     | YES  |     | NULL    |       |  
-+-------+--------------+------+-----+---------+-------+    
+
+>| Field | Type         | Null | Key | Default | Extra |  
+>| :----- | :----- | :----- | :----- | :----- | :----- |    
+>| id    | varchar(255) | NO   | PRI | NULL    |       |  
+>| file  | longtext     | YES  |     | NULL    |       |  
+    
 
 *C- TA database definition*  
 
@@ -85,14 +84,14 @@ file longtext);
 TA_keyword varchar(255), TA_keyword_numfiles int, TA_keyword_numsearch int);    
 
 >mysql> SHOW COLUMNS from sse_TA;  
-+----------------------+--------------+------+-----+---------+----------------+  
-| Field                | Type         | Null | Key | Default | Extra          |  
-+----------------------+--------------+------+-----+---------+----------------+  
-| TA_id                | int          | NO   | PRI | NULL    | auto_increment |  
-| TA_keyword           | varchar(255) | YES  |     | NULL    |                |  
-| TA_keyword_numfiles  | int          | YES  |     | NULL    |                |  
-| TA_keyword_numsearch | int          | YES  |     | NULL    |                |  
-+----------------------+--------------+------+-----+---------+----------------+  
+  
+>| Field                | Type         | Null | Key | Default | Extra          |  
+>| :----- | :----- | :----- | :----- | :----- | :----- |    
+>| TA_id                | int          | NO   | PRI | NULL    | auto_increment |  
+>| TA_keyword           | varchar(255) | YES  |     | NULL    |                |  
+>| TA_keyword_numfiles  | int          | YES  |     | NULL    |                |  
+>| TA_keyword_numsearch | int          | YES  |     | NULL    |                |  
+
 
 
 *D- Final steps*  
