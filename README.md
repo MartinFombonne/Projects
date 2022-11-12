@@ -2,13 +2,13 @@
 
 The following project has for purpose to set up and test a Searchable symmetric encryption scheme (SSE). 
 
-I-How does it work ? 
+__I-How does it work ?__ 
 
 The project is composed of 5 scripts : SID.py, Owner.py, TA.py, CSP.py and User.py. The SID.py is the selection menu. For the others each script represents an entity (DataOwner, User, TA or CSP). 
 But what is SSE exactly about ? A data owner wants to store his file on a CSP and allows queries on the files but cannot trust the CSP to received the files in plaintext. So the dataowner use the SSE scheme to stored encrypted indexes in the CSP and a Trusted Authority (TA) to do that. Once the files has been sent to the CSP. A user with the secret key should be able to queries for files that contains specific words and retrieved files from the CSP. All this process is done without the CSP being able to learn what kind of text is stored in his database, what words are the users searching for and what files name it returns.
 
 
-II- How to try it ? 
+__II- How to try it ?__ 
 
 -First, you need to complete the requirements.
 -Then, simply add you dataset (TXT texts) to the IniFiles folder.
@@ -20,18 +20,19 @@ II- How to try it ?
     * Search as a simple user for a the files that contains a specific word (Press 3 and enter the word you want to query for)
     * Retrieved a file as a simple user from the CSP. If you already know the name of the file you are looking for you can simply press 4 and enter it. If not you will first need to use the Search option. All the files retrieved using this option can be found in the "Retrieved folder" 
 
-III-Requirements
+__III-Requirements__
 
 First you need to set up the mysql databases that the script will use :
 
-A- DataOwner database definition :
+*A- DataOwner database definition :*
 
 >CREATE DATABASE SID; 
 
 >CREATE TABLE sse_TA(TA_keyword_id int PRIMARY KEY NOT NULL AUTO_INCREMENT,
-TA_keyword varchar(255), TA_keyword_numfiles int, TA_keyword_numsearch int)
+TA_keyword varchar(255), TA_keyword_numfiles int, TA_keyword_numsearch int)  
 
-mysql> SHOW COLUMNS from sse_TA;  
+>mysql> SHOW COLUMNS from sse_TA;  
+
 +----------------------+--------------+------+-----+---------+----------------+    
 | Field                 | Type         | Null | Key | Default | Extra          |    
 +----------------------+--------------+------+-----+---------+----------------+    
@@ -41,7 +42,7 @@ mysql> SHOW COLUMNS from sse_TA;
 | TA_keyword_numsearch  | int          | YES  |     | NULL    |                |    
 +----------------------+--------------+------+-----+---------+----------------+    
 
-B- CSP database definition :  
+*B- CSP database definition :*  
 
 >CREATE DATABASE CSP;   
 
@@ -72,7 +73,7 @@ file longtext);
 | file  | longtext     | YES  |     | NULL    |       |  
 +-------+--------------+------+-----+---------+-------+  
 
-C- TA database definition :   
+*C- TA database definition :  * 
 
 >CREATE DATABASE TA;   
 
@@ -92,7 +93,7 @@ TA_keyword varchar(255), TA_keyword_numfiles int, TA_keyword_numsearch int);
 +----------------------+--------------+------+-----+---------+----------------+  
 
 
-D- Final steps  
+*D- Final steps  *
 
 -Make sure to use "Password123? as password to connect to the database or to modify the script Owner.py,TA.py and CSP.py  
 -Be sure to install the packet for the following list :   
