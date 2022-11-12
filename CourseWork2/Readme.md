@@ -12,15 +12,15 @@ But what is SSE exactly about ? A data owner wants to store his file on a CSP an
 
 __II- How to try it ?__ 
 
--First, you need to complete the requirements.
--Then, simply add you dataset (TXT texts) to the IniFiles folder.
--You are now ready to go, you simply run the SID.py script 
--That would pop a selection menu where you can choose between actions as a Data Owner or a simple user. Here we don't talk about authentication but obviously in a real word application there should be a way to be identify as a Dataowner or a user. 
--The first think you want to do the is to send you initial dataset to the CSP(Press 1 ). This operation can take some times depends on how many files and their sizes.
--When the initialisation part is over you know have different choices : 
-    * Add a new file to the CSP as a Dataowner (Simply make sure that the file you want to add can be found in the "addfiles" folder and Press 2)
-    * Search as a simple user for a the files that contains a specific word (Press 3 and enter the word you want to query for)
-    * Retrieved a file as a simple user from the CSP. If you already know the name of the file you are looking for you can simply press 4 and enter it. If not you will first need to use the Search option. All the files retrieved using this option can be found in the "Retrieved folder" 
+-First, you need to complete the requirements.  
+-Then, simply add you dataset (TXT texts) to the IniFiles folder.  
+-You are now ready to go, you simply run the SID.py script.   
+-That would pop a selection menu where you can choose between actions as a Data Owner or a simple user. Here we don't talk about authentication but obviously in a real word application there should be a way to be identify as a Dataowner or a user.   
+-The first think you want to do the is to send you initial dataset to the CSP(Press 1 ). This operation can take some times depends on how many files and their sizes.  
+-When the initialisation part is over you know have different choices :   
+    '* Add a new file to the CSP as a Dataowner (Simply make sure that the file you want to add can be found in the "addfiles" folder and Press 2)  
+    '* Search as a simple user for a the files that contains a specific word (Press 3 and enter the word you want to query for)  
+    '* Retrieved a file as a simple user from the CSP. If you already know the name of the file you are looking for you can simply press 4 and enter it. If not you will first need to use the Search option. All the files retrieved using this option can be found in the "Retrieved folder"   
 
 __III-Requirements__
 
