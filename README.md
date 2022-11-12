@@ -71,9 +71,9 @@ file longtext);
 +-------+--------------+------+-----+---------+-------+  
 | id    | varchar(255) | NO   | PRI | NULL    |       |  
 | file  | longtext     | YES  |     | NULL    |       |  
-+-------+--------------+------+-----+---------+-------+  
++-------+--------------+------+-----+---------+-------+    
 
-*C- TA database definition :  * 
+*C- TA database definition :*  
 
 >CREATE DATABASE TA;   
 
@@ -93,7 +93,7 @@ TA_keyword varchar(255), TA_keyword_numfiles int, TA_keyword_numsearch int);
 +----------------------+--------------+------+-----+---------+----------------+  
 
 
-*D- Final steps  *
+*D- Final steps*  
 
 -Make sure to use "Password123? as password to connect to the database or to modify the script Owner.py,TA.py and CSP.py  
 -Be sure to install the packet for the following list :   
