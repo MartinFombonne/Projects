@@ -53,7 +53,7 @@ csp_keywords_address varchar(255), csp_keywords_value varchar(255));
 
 >mysql> SHOW COLUMNS FROM CSP_dict;  
 +----------------------+--------------+------+-----+---------+----------------+  
-| Field                | Type         | Null | Key | Default | Extra          |  
+| --------Field--------| -----Type----| Null | Key | Default | -----Extra-----|  
 +----------------------+--------------+------+-----+---------+----------------+  
 | id                   | int          | NO   | PRI | NULL    | auto_increment |  
 | csp_keywords_address | varchar(255) | YES  |     | NULL    |                |  
