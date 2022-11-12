@@ -1,4 +1,4 @@
-# Projects
+# SSE Scheme
 
 The following project has for purpose to set up and test a Searchable symmetric encryption scheme (SSE). 
 
@@ -26,76 +26,76 @@ First you need to set up the mysql databases that the script will use :
 
 A- DataOwner database definition :
 
-CREATE DATABASE SID; 
+>CREATE DATABASE SID; 
 
-CREATE TABLE sse_TA(TA_keyword_id int PRIMARY KEY NOT NULL AUTO_INCREMENT,
+>CREATE TABLE sse_TA(TA_keyword_id int PRIMARY KEY NOT NULL AUTO_INCREMENT,
 TA_keyword varchar(255), TA_keyword_numfiles int, TA_keyword_numsearch int)
 
-mysql> SHOW COLUMNS from sse_TA;
+mysql> SHOW COLUMNS from sse_TA;  
++----------------------+--------------+------+-----+---------+----------------+    
+| Field                | Type         | Null | Key | Default | Extra          |    
++----------------------+--------------+------+-----+---------+----------------+    
+| TA_keyword_id        | int          | NO   | PRI | NULL    | auto_increment |    
+| TA_keyword           | varchar(255) | YES  |     | NULL    |                |    
+| TA_keyword_numfiles  | int          | YES  |     | NULL    |                |    
+| TA_keyword_numsearch | int          | YES  |     | NULL    |                |    
++----------------------+--------------+------+-----+---------+----------------+    
+
+B- CSP database definition :  
+
+>CREATE DATABASE CSP;   
+
+>TABLE CSP_dict :   
+
+>CREATE TABLE CSP_dict(id int PRIMARY KEY NOT NULL AUTO_INCREMENT,
+csp_keywords_address varchar(255), csp_keywords_value varchar(255));
+
+>mysql> SHOW COLUMNS FROM CSP_dict;  
 +----------------------+--------------+------+-----+---------+----------------+  
 | Field                | Type         | Null | Key | Default | Extra          |  
 +----------------------+--------------+------+-----+---------+----------------+  
-| TA_keyword_id        | int          | NO   | PRI | NULL    | auto_increment |  
+| id                   | int          | NO   | PRI | NULL    | auto_increment |  
+| csp_keywords_address | varchar(255) | YES  |     | NULL    |                |  
+| csp_keywords_value   | varchar(255) | YES  |     | NULL    |                |  
++----------------------+--------------+------+-----+---------+----------------+  
+
+TABLE library :   
+
+>CREATE TABLE library(id varchar(255) PRIMARY KEY,
+file longtext);  
+
+>mysql> SHOW COLUMNS FROM library;  
++-------+--------------+------+-----+---------+-------+  
+| Field | Type         | Null | Key | Default | Extra |  
++-------+--------------+------+-----+---------+-------+  
+| id    | varchar(255) | NO   | PRI | NULL    |       |  
+| file  | longtext     | YES  |     | NULL    |       |  
++-------+--------------+------+-----+---------+-------+  
+
+C- TA database definition :   
+
+>CREATE DATABASE TA;   
+
+>CREATE DATABASE TA;  
+
+>CREATE TABLE sse_TA(TA_keyword_id int PRIMARY KEY NOT NULL AUTO_INCREMENT,
+TA_keyword varchar(255), TA_keyword_numfiles int, TA_keyword_numsearch int);    
+
+>mysql> SHOW COLUMNS from sse_TA;  
++----------------------+--------------+------+-----+---------+----------------+  
+| Field                | Type         | Null | Key | Default | Extra          |  
++----------------------+--------------+------+-----+---------+----------------+  
+| TA_id                | int          | NO   | PRI | NULL    | auto_increment |  
 | TA_keyword           | varchar(255) | YES  |     | NULL    |                |  
 | TA_keyword_numfiles  | int          | YES  |     | NULL    |                |  
 | TA_keyword_numsearch | int          | YES  |     | NULL    |                |  
 +----------------------+--------------+------+-----+---------+----------------+  
 
-B- CSP database definition :
 
-CREATE DATABASE CSP; 
+D- Final steps  
 
-TABLE CSP_dict : 
-
-CREATE TABLE CSP_dict(id int PRIMARY KEY NOT NULL AUTO_INCREMENT,
-csp_keywords_address varchar(255), csp_keywords_value varchar(255));
-
-mysql> SHOW COLUMNS FROM CSP_dict;
-+----------------------+--------------+------+-----+---------+----------------+
-| Field                | Type         | Null | Key | Default | Extra          |
-+----------------------+--------------+------+-----+---------+----------------+
-| id                   | int          | NO   | PRI | NULL    | auto_increment |
-| csp_keywords_address | varchar(255) | YES  |     | NULL    |                |
-| csp_keywords_value   | varchar(255) | YES  |     | NULL    |                |
-+----------------------+--------------+------+-----+---------+----------------+
-
-TABLE library : 
-
-CREATE TABLE library(id varchar(255) PRIMARY KEY,
-file longtext);
-
-mysql> SHOW COLUMNS FROM library;
-+-------+--------------+------+-----+---------+-------+
-| Field | Type         | Null | Key | Default | Extra |
-+-------+--------------+------+-----+---------+-------+
-| id    | varchar(255) | NO   | PRI | NULL    |       |
-| file  | longtext     | YES  |     | NULL    |       |
-+-------+--------------+------+-----+---------+-------+
-
-C- TA database definition : 
-
-CREATE DATABASE TA; 
-
-CREATE DATABASE TA;
-
-CREATE TABLE sse_TA(TA_keyword_id int PRIMARY KEY NOT NULL AUTO_INCREMENT,
-TA_keyword varchar(255), TA_keyword_numfiles int, TA_keyword_numsearch int)
-
-mysql> SHOW COLUMNS from sse_TA;
-+----------------------+--------------+------+-----+---------+----------------+
-| Field                | Type         | Null | Key | Default | Extra          |
-+----------------------+--------------+------+-----+---------+----------------+
-| TA_id                | int          | NO   | PRI | NULL    | auto_increment |
-| TA_keyword           | varchar(255) | YES  |     | NULL    |                |
-| TA_keyword_numfiles  | int          | YES  |     | NULL    |                |
-| TA_keyword_numsearch | int          | YES  |     | NULL    |                |
-+----------------------+--------------+------+-----+---------+----------------+
-
-
-D- Final steps
-
--Make sure to use "Password123? as password to connect to the database or to modify the script Owner.py,TA.py and CSP.py
--Be sure to install the packet for the following list : 
+-Make sure to use "Password123? as password to connect to the database or to modify the script Owner.py,TA.py and CSP.py  
+-Be sure to install the packet for the following list :   
 
     *pymysql
     *hashlib
@@ -108,4 +108,4 @@ D- Final steps
     *os
     *glob
 
->> pip install pymysql hashlib time ast Cryptodome base64 tqdm re os glob
+> pip install pymysql hashlib time ast Cryptodome base64 tqdm re os glob
