@@ -19,8 +19,8 @@ __II- How to try it ?__
 >- The first think you want to do the is to send you initial dataset to the CSP(Press 1 ). This operation can take some times depends on how many files and their sizes.  
 >- When the initialisation part is over you know have different choices :   
 >   - Add a new file to the CSP as a Dataowner (Simply make sure that the file you want to add can be found in the "addfiles" folder and Press 2)  
->     * Search as a simple user for a the files that contains a specific word (Press 3 and enter the word you want to query for)  
->     * Retrieved a file as a simple user from the CSP. If you already know the name of the file you are looking for you can simply press 4 and enter it. If not you will first need to use the Search option. All the files retrieved using this option can be found in the "Retrieved folder"   
+>   - Search as a simple user for a the files that contains a specific word (Press 3 and enter the word you want to query for)  
+>   - Retrieved a file as a simple user from the CSP. If you already know the name of the file you are looking for you can simply press 4 and enter it. If not you will first need to use the Search option. All the files retrieved using this option can be found in the "Retrieved folder"   
 
 __III-Requirements__
 
