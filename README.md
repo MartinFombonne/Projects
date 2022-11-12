@@ -97,15 +97,15 @@ D- Final steps
 -Make sure to use "Password123? as password to connect to the database or to modify the script Owner.py,TA.py and CSP.py  
 -Be sure to install the packet for the following list :   
 
-    *pymysql
-    *hashlib
-    *time
-    *ast
-    *Cryptodome
-    *base64
-    *tqdm
-    *re
-    *os
-    *glob
+    * pymysql
+    * hashlib
+    * time
+    * ast
+    * Cryptodome
+    * base64
+    * tqdm
+    * re
+    * os
+    * glob
 
 > pip install pymysql hashlib time ast Cryptodome base64 tqdm re os glob
