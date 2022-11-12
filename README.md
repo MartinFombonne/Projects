@@ -24,7 +24,7 @@ __III-Requirements__
 
 First you need to set up the mysql databases that the script will use :
 
-*A- DataOwner database definition :*
+*A- DataOwner database definition*
 
 >CREATE DATABASE SID; 
 
@@ -42,7 +42,7 @@ TA_keyword varchar(255), TA_keyword_numfiles int, TA_keyword_numsearch int)
 | TA_keyword_numsearch  | int          | YES  |     | NULL    |                |    
 +----------------------+--------------+------+-----+---------+----------------+    
 
-*B- CSP database definition :*  
+*B- CSP database definition*  
 
 >CREATE DATABASE CSP;   
 
@@ -73,7 +73,7 @@ file longtext);
 | file  | longtext     | YES  |     | NULL    |       |  
 +-------+--------------+------+-----+---------+-------+    
 
-*C- TA database definition :*  
+*C- TA database definition*  
 
 >CREATE DATABASE TA;   
 
