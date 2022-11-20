@@ -31,7 +31,7 @@ Once the user has learned some files that exist on the CSP he can download them 
 __III- How to try it ?__ 
 
 >- First, you need to complete the requirements.  
->- Then, simply add you dataset (TXT texts) to the IniFiles folder.  
+>- Then, simply add files to the IniFiles folder.  
 >- You are now ready to go, you simply run the SID.py script.   
 >- That would pop a selection menu where you can choose between actions as a Data Owner or a simple user. Here we don't talk about authentication but obviously in a real word application there should be a way to be identify as a Dataowner or a user.   
 >- The first think you want to do the is to send you initial dataset to the CSP(Press 1 ). This operation can take some times depends on how many files and their sizes.  
