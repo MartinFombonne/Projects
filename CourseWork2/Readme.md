@@ -23,6 +23,7 @@ Search :
 The users that have the same secret key as the one used for encryption can query the CSP for a specific word. The CSP return all the files that cotnains this specific word. In order to do that the user need to reach the TA to learn in how many files the searched word exist and how many time it has been searched. Thank to this information the user can compute the addresses needed to recover values from the CSP. Once this values are retrieved the user can use the secret key to decrypt the value and recover the name of the files.
 
 Retrieve Files :  
+
 Once the user has learned some files that exist on the CSP he can download them directly from the CSP by send a retrieve request with the encrypted name of the file to the CSP using the secret key. The CSP simply return the files on a specific folder
 
 
