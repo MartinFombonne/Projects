@@ -13,6 +13,7 @@ __II-How does it work ?__
 
 The project is composed of 5 scripts : SID.py, Owner.py, TA.py, CSP.py and User.py. 
 The SID.py is the selection menu. The other script correspond what would run on the different entities (DataOwner, User, TA or CSP). 
+Note that in this experience the Key is stored locally in the same file for everyone. But in the real world application only the owner and user have access to the full secret key and the TA only has access to the Kta symmetrical key. So the Dataowner have to find a way to transmit securely the secret key to the user and the symetrical key Kta to the Trusted Authority for them to store their own copies. 
 
 Initiazation : 
 
