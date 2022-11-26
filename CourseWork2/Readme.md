@@ -31,10 +31,10 @@ Once the user has learned some files that exist on the CSP he can download them 
 
 __III- How to try it ?__ 
 
->- First, you need to complete the requirements.  
->- Then, simply add files to the IniFiles folder.  
+>- First, you need to run the setup.py script in order to create the Mysql Databases and to verify that you have downloaded all the requiered python modules (if there is an issue check section IV. D) 
+>- Then, simply add files you want to store in the IniFiles folder.  
 >- You are now ready to go, you simply run the SID.py script.   
->- That would pop a selection menu where you can choose between actions as a Data Owner or a simple user. Here we don't talk about authentication but obviously in a real word application there should be a way to be identify as a Dataowner or a user.   
+>- A selection menu should appears where you can choose between actions as a Data Owner or a simple user. Here we don't talk about authentication but obviously in a real word application there should be a way to be identify as a Dataowner or a user.   
 >- The first think you want to do the is to send you initial dataset to the CSP(Press 1 ). This operation can take some times depends on how many files and their sizes.  
 >- When the initialisation part is over you know have different choices :   
 >   - Add a new file to the CSP as a Dataowner (Simply make sure that the file you want to add can be found in the "addfiles" folder and Press 2)  
@@ -43,16 +43,14 @@ __III- How to try it ?__
 
 __IV-Requirements__
 
-First you need to set up the mysql databases that the script will use :
+-First you need to install mysql and to ensure that the service is running (sudo service mysqld start).
+-Then the script Setup.py will be used to create the databases use in the SSE scheme, verify if all the need python modules are installed and finally to stored the credentials to access to the databases. 
 
 *A- DataOwner database definition*
 
->CREATE DATABASE SID; 
-
+>Definition sse_user :
 >CREATE TABLE sse_user(keyword_id int PRIMARY KEY NOT NULL AUTO_INCREMENT,
 keyword varchar(255), keyword_numfiles int, keyword_numsearch int)  
-
->mysql> SHOW COLUMNS from sse_TA;  
 
   
 >| Field | Type| Null | Key | Default | Extra |    
@@ -65,10 +63,8 @@ keyword varchar(255), keyword_numfiles int, keyword_numsearch int)
 
 *B- CSP database definition*  
 
->CREATE DATABASE CSP;   
 
->TABLE CSP_dict :   
-
+>Definition CSP_dict:  
 >CREATE TABLE CSP_dict(id int PRIMARY KEY NOT NULL AUTO_INCREMENT,
 csp_keywords_address varchar(255), csp_keywords_value varchar(255));
 
@@ -80,8 +76,7 @@ csp_keywords_address varchar(255), csp_keywords_value varchar(255));
 >| csp_keywords_address | varchar(255) | YES  |     | NULL    |                |  
 >| csp_keywords_value   | varchar(255) | YES  |     | NULL    |                |  
 
-TABLE library :   
-
+Definition library:   
 >CREATE TABLE library(id varchar(255) PRIMARY KEY,
 file longtext);  
 
@@ -95,14 +90,10 @@ file longtext);
 
 *C- TA database definition*  
 
->CREATE DATABASE TA;   
-
->CREATE DATABASE TA;  
-
->CREATE TABLE sse_TA(TA_keyword_id int PRIMARY KEY NOT NULL AUTO_INCREMENT,
+>Definition sse_TA :  
+>Csudo service mysqld start
+REATE TABLE sse_TA(TA_keyword_id int PRIMARY KEY NOT NULL AUTO_INCREMENT,
 TA_keyword varchar(255), TA_keyword_numfiles int, TA_keyword_numsearch int);    
-
->mysql> SHOW COLUMNS from sse_TA;  
   
 >| Field                | Type         | Null | Key | Default | Extra          |  
 >| :----- | :----- | :----- | :----- | :----- | :----- |    
@@ -112,21 +103,18 @@ TA_keyword varchar(255), TA_keyword_numfiles int, TA_keyword_numsearch int);
 >| TA_keyword_numsearch | int          | YES  |     | NULL    |                |  
 
 
-
 *D- Final steps*  
 
--Make sure to use "Password123? as password to connect to the database or to modify the script Owner.py,TA.py and CSP.py  
--Be sure to install the packet for the following list :   
+-Make sure that all the database have been correctly create. 
+-Make sure that you are able to import all this module :   
 
-    * pymysql
-    * hashlib
-    * time
-    * ast
-    * Cryptodome
-    * base64
-    * tqdm
-    * re
-    * os
-    * glob
-
-> pip install pymysql hashlib time ast Cryptodome base64 tqdm re os glob
+    - pymysql
+    - hashlib
+    - time
+    - ast
+    - Cryptodome
+    - base64
+    - tqdm
+    - re
+    - os
+    - glob
