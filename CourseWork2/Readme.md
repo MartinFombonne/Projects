@@ -49,8 +49,8 @@ First you need to set up the mysql databases that the script will use :
 
 >CREATE DATABASE SID; 
 
->CREATE TABLE sse_TA(TA_keyword_id int PRIMARY KEY NOT NULL AUTO_INCREMENT,
-TA_keyword varchar(255), TA_keyword_numfiles int, TA_keyword_numsearch int)  
+>CREATE TABLE sse_user(keyword_id int PRIMARY KEY NOT NULL AUTO_INCREMENT,
+keyword varchar(255), keyword_numfiles int, keyword_numsearch int)  
 
 >mysql> SHOW COLUMNS from sse_TA;  
 
