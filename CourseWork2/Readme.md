@@ -2,7 +2,7 @@
 
 The following project has for purpose to set up and test a Searchable symmetric encryption scheme (SSE). 
 
-__Demo__: https://www.youtube.com/watch?v=CdzNdHBwrIw
+__Demo__:  https://youtu.be/6tEFJJ8vhvM  
 
 __I-What is SSE ?__
 
