@@ -106,7 +106,8 @@ TA_keyword varchar(255), TA_keyword_numfiles int, TA_keyword_numsearch int);
 
 *D- Final steps*  
 
--Make sure that all the database have been correctly create. 
+-Make sure that all the database have been correctly create.  
+-Make sure that your mysql server is running   
 -Make sure that you are able to import all this module :   
 
     - pymysql
